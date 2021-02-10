@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jolha</title>
+</head>
+<body>
+    <h1>Jolha</h1>
+    <p>18 anos</p>
+    <p>Estudante de Python</p> <br>
+    <h2 id="acoes">Ações</h2>
+    <!-- <p><a href="http://localhost:3000/?horas=45&valor=15">Todas as infos</a></p>
+    <p><a href="http://localhost:3000/bruto?horas=45&valor=15">Bruto</a></p>
+    <p><a href="http://localhost:3000/liquido?horas=45&valor=15">Líquido</a></p> -->
+    <input placeholder="horas" id="horas"><br><br>
+    <input placeholder="valor" id="valor"><br><br>
+    <button type="button" onclick="infos()">Ir</button>
+    <button type="button" onclick="bruto()">Bruto</button>
+    <button type="button" onclick="liquido()">Líquido</button>
+</body>
+<script>
+    function infos() {
+        var horas = document.getElementById('horas').value;
+        var valor = document.getElementById('valor').value;
+        window.location.href = "http://localhost:3000/?valor="+valor+"&horas="+horas
+    }
+    function bruto() {
+        var horas = document.getElementById('horas').value;
+        var valor = document.getElementById('valor').value;
+        window.location.href = "http://localhost:3000/bruto?valor="+valor+"&horas="+horas
+    }
+    function liquido() {
+        var horas = document.getElementById('horas').value;
+        var valor = document.getElementById('valor').value;
+        window.location.href = "http://localhost:3000/liquido?valor="+valor+"&horas="+horas
+    }
+</script>
+</html>
